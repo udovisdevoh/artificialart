@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E9308EC-7FF0-4810-BD98-CCB76F1D2F55}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ArtificialArt</RootNamespace>
+    <AssemblyName>ArtificialArt</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\ArtificialArt.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sanford.Collections, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Sanford.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Sanford.Multimedia.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Multimedia.Timers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Sanford.Multimedia.Timers.dll</HintPath>
+    </Reference>
+    <Reference Include="Sanford.Threading, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Sanford.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Audio\Midi\Generator\IO\MidiGeneratorIO.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumChromaticTerminator.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumChromaticTerminator.cs" />
+    <Compile Include="Audio\Midi\Generator\PredefinedGenerator\PredefinedGenerator.cs" />
+    <Compile Include="Audio\Midi\Generator\PredefinedGenerator\PredefinedGeneratorTrack.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPackBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffBagPipePersian.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffBagPipeScottish.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffBassSynth.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffBellChurch.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffBellTibet.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumBassBinary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumBassQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumChromaticQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumChromaticWoodBlockTernary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumOcta.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumQuint.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumSnareDouble.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumSnareOcta.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumSnareQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffDrumTernary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffFluteChinese.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffFluteJapanese.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarArab.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarFolkBinary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarFolkTernary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarGypsy.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarMetalBlack.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarMetalSpeed.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarPunkQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffGuitarPunkTernary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffHarpCeltic.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffHarpsichord.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffOrchestraHitHipHop.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffOrganChurch.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffPadAum.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffPadBagPipe.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffPadString.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffPianoClassic.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffPianoDebussy.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffPianoMeditation.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSaxBlues.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSaxFreeJazz.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffShamisenChinese.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffShamisenJapanese.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSitarQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSitarTernaryQuinternary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSteelDrum.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSynthLeadFurder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSynthLeadRom.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffSynthLeadVonSpen.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffTrumpetClassic.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffTrumpetTurkish.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffViolinArab.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffViolinCeltic.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\Implementations\MetaRiffXylophoneBali.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\MetaRiff.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiff\MetaRiffLoader.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\CompositeMetaRiffPack.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackArab.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackBassSynth.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackChurch.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumBassBinary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumBassQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumChromaticQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumChromaticWoodBlockTernary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumOcta.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumQuint.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumSnareDouble.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumSnareOcta.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumSnareQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumTernaryOne.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackDrumTernaryTwo.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackGuitarFolk.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackGuitarFolkTernary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackGuitarMetalBlack.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackGuitarMetalSpeed.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackGuitarPunkQuad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackGuitarPunkTernary.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackHarpsichord.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeChina.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeIndia.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeIndonesia.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeIrish.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeJamaican.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeJapan.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeScottish.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeThailand.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeTibet.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackMeditativeWest.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackPad.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackPersian.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackPianoClassic.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackPianoDebussy.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackSynthLead.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackSynthLeadArpege.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackTrumpetClassic.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\Implementations\MetaRiffPackViolinCeltic.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\MetaRiffPack.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaRiffPack\MetaRiffPackLoader.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\MetaSong\MetaSong.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\MetaSong\MetaSongBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\MetaSong\MetaSongException.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\Modulator\Modulator.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\Modulator\ModulatorBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\TimeFrame\BarBlock.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\TimeFrame\Builder\ExtrapolationBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\TimeFrame\Builder\TimeFrameBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\TimeFrame\Builder\TrackFinder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\TimeFrame\Builder\VersePeakBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\TimeFrame\TimeFrame.cs" />
+    <Compile Include="Audio\Midi\Generator\MetaSong\TimeFrame\TimeFrameException.cs" />
+    <Compile Include="Audio\Midi\Generator\MidiPlayerException.cs" />
+    <Compile Include="Audio\Midi\Generator\MusicGenerator.cs" />
+    <Compile Include="Audio\Midi\Generator\RiffToSequenceConverter\RiffToSequenceConverter.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Note\Note.cs" />
+    <Compile Include="Audio\Midi\Generator\Player\notePlayer\NotePlayer.cs" />
+    <Compile Include="Audio\Midi\Generator\Player\Player.cs" />
+    <Compile Include="Audio\Midi\Generator\Player\riffPackPlayer\ChannelMemory.cs" />
+    <Compile Include="Audio\Midi\Generator\Player\riffPackPlayer\RiffPackPlayer.cs" />
+    <Compile Include="Audio\Midi\Generator\Player\riffPackPlayer\RiffPackPlayerMemory.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Builders\DrumVelocityHacker.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Builders\IntervalAnalyzer.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Builders\RiffBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Builders\RiffBuilderException.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Builders\RiffPackBuilder.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Riff\IRiff.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Riff\Riff.cs" />
+    <Compile Include="Audio\Midi\Generator\Riff\Riff\RiffPack.cs" />
+    <Compile Include="Audio\Midi\Generator\RythmPattern\Builders\RythmPatternBuilderException.cs" />
+    <Compile Include="Audio\Midi\Generator\RythmPattern\Builders\RythmPatternBuilderTimeSplit.cs" />
+    <Compile Include="Audio\Midi\Generator\RythmPattern\RythmPattern.cs" />
+    <Compile Include="Audio\Midi\Sanford\Clocks\IClock.cs" />
+    <Compile Include="Audio\Midi\Sanford\Clocks\MidiInternalClock.cs" />
+    <Compile Include="Audio\Midi\Sanford\Clocks\PpqnClock.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.Construction.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.Events.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.Fields.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.Messaging.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.Properties.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.PublicMethods.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\InputDevice.Win32.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\InputDevice Class\MidiInCaps.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\MidiDevice.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\MidiDeviceException.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\MidiHeader.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\MidiHeaderBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\OutputDevice Classes\MidiOutCaps.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\OutputDevice Classes\NoOpEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\OutputDevice Classes\OutputDevice.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\OutputDevice Classes\OutputDeviceBase.cs" />
+    <Compile Include="Audio\Midi\Sanford\Device Classes\OutputDevice Classes\OutputStream.cs" />
+    <Compile Include="Audio\Midi\Sanford\GeneralMidi.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\ChannelMessage.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\EventArgs\ChannelMessageEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\EventArgs\InvalidShortMessageEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\EventArgs\InvalidSysExMessageEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\EventArgs\MetaMessageEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\EventArgs\SysCommonMessageEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\EventArgs\SysExMessageEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\EventArgs\SysRealtimeMessageEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\IMidiMessage.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\ChannelMessageBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\IMessageBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\KeySignatureBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\MetaTextBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\SongPositionPointerBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\SysCommonMessageBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\TempoChangeBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\Message Builders\TimeSignatureBuilder.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\MessageDispatcher.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\MetaMessage.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\ShortMessage.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\SysCommonMessage.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\SysExMessage.cs" />
+    <Compile Include="Audio\Midi\Sanford\Messages\SysRealtimeMessage.cs" />
+    <Compile Include="Audio\Midi\Sanford\MidiNoteConverter.cs" />
+    <Compile Include="Audio\Midi\Sanford\Processing\ChannelChaser.cs" />
+    <Compile Include="Audio\Midi\Sanford\Processing\ChannelStopper.cs" />
+    <Compile Include="Audio\Midi\Sanford\Processing\ChasedEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Processing\StoppedEventArgs.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\MidiEvent.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\MidiFileProperties.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\RecordingSession.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\Sequence.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\Sequencer.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\Track Classes\Track.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\Track Classes\Track.Iterators.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\Track Classes\Track.Test.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\Track Classes\TrackReader.cs" />
+    <Compile Include="Audio\Midi\Sanford\Sequencing\Track Classes\TrackWriter.cs" />
+    <Compile Include="Audio\Midi\Sanford\UI\DeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\DeviceDialog.Designer.cs">
+      <DependentUpon>DeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\InputDeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\InputDeviceDialog.Designer.cs">
+      <DependentUpon>InputDeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\OutputDeviceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\OutputDeviceDialog.Designer.cs">
+      <DependentUpon>OutputDeviceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\PianoControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\PianoControl.PianoKey.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\PianoControlDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\PianoControlDialog.Designer.cs">
+      <DependentUpon>PianoControlDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Audio\Midi\Sanford\UI\PianoKeyEventArgs.cs" />
+    <Compile Include="Audio\Midi\Generator\Scale\Scale.cs" />
+    <Compile Include="Audio\Midi\Generator\Scale\ScaleChooser.cs" />
+    <Compile Include="Audio\Midi\Generator\Scale\ScaleChooserException.cs" />
+    <Compile Include="Audio\Midi\Generator\Scale\Scales.cs" />
+    <Compile Include="Audio\Midi\Generator\IO\RiffIO.cs" />
+    <Compile Include="Linguistics\English\Analysis\Analysis.cs" />
+    <Compile Include="Linguistics\English\Analysis\Parts\SubjectObjectDetector.cs" />
+    <Compile Include="Linguistics\English\Analysis\Parts\VerbManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\FirstSecondPersonManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Imperative\ImperativeManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Negation\AintManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Negation\NegationManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Negation\NotManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Negation\NtManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Question\Parts\QuestionAdder.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Question\Parts\QuestionManagerByEndingWord.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Question\Parts\QuestionManagerByMarkOnly.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Question\Parts\QuestionManagerByModalVerb.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Question\Parts\QuestionManagerByStartingWithQuestionWord.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Question\Parts\QuestionManagerStartingWithQuestionWordPlusSpecialVerb.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Question\QuestionManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Parts\Synonym\SynonymManager.cs" />
+    <Compile Include="Linguistics\English\Transformations\Transformations.cs" />
+    <Compile Include="Linguistics\Language\LanguageDetector.cs" />
+    <Compile Include="Linguistics\Language\Mutator\LanguageMutator.cs" />
+    <Compile Include="Linguistics\Language\LanguageNames.cs" />
+    <Compile Include="Linguistics\Language\LanguageManager.cs" />
+    <Compile Include="Linguistics\Language\LanguageMatrixCollection.cs" />
+    <Compile Include="Linguistics\Language\LanguageMatrix.cs" />
+    <Compile Include="Linguistics\Language\LanguageParodyTextGenerator.cs" />
+    <Compile Include="Linguistics\Letters\LetterManager.cs" />
+    <Compile Include="Linguistics\Letters\LetterPhoneticDistanceManager.cs" />
+    <Compile Include="Linguistics\StringManipulations\Parts\KeepCaseReplacer.cs" />
+    <Compile Include="Linguistics\StringManipulations\Parts\WordInsertionManager.cs" />
+    <Compile Include="Linguistics\StringManipulations\Parts\WordInversionManager.cs" />
+    <Compile Include="Linguistics\StringManipulations\Parts\WordRemover.cs" />
+    <Compile Include="Linguistics\StringManipulations\Parts\WordSequenceReplacer.cs" />
+    <Compile Include="Linguistics\StringManipulations\StringManipulations.cs" />
+    <Compile Include="Linguistics\Word.cs" />
+    <Compile Include="Linguistics\WordList\WordList.cs" />
+    <Compile Include="Linguistics\WordList\WordListFromFile.cs" />
+    <Compile Include="Linguistics\WordList\WordListFromString.cs" />
+    <Compile Include="Linguistics\WordStream.cs" />
+    <Compile Include="Linguistics\WordStringStream.cs" />
+    <Compile Include="Logic\DerivationTransformations\AImplyBAndCManager.cs" />
+    <Compile Include="Logic\DerivationTransformations\AOrBImplyCManager.cs" />
+    <Compile Include="Logic\Deriver.cs" />
+    <Compile Include="Logic\DerivationTransformations\DisjunctiveSyllogismManager.cs" />
+    <Compile Include="Logic\Evaluator.cs" />
+    <Compile Include="Logic\DerivationTransformations\HypotheticalSyllogismManager.cs" />
+    <Compile Include="Logic\LogicDerivationNoConclusionException.cs" />
+    <Compile Include="Logic\DerivationTransformations\ModusPonensManager.cs" />
+    <Compile Include="Logic\LogicDerivation.cs" />
+    <Compile Include="Logic\DerivationTransformations\ModusTollensManager.cs" />
+    <Compile Include="Logic\Negator.cs" />
+    <Compile Include="Logic\SolvingMethod.cs" />
+    <Compile Include="Logic\DerivationTransformations\SplitAndOperatorManager.cs" />
+    <Compile Include="Logic\DerivationTransformations\TrueImplyFalseManager.cs" />
+    <Compile Include="Lyrics\ILyricSongFactory.cs" />
+    <Compile Include="Lyrics\IO\LyricIO.cs" />
+    <Compile Include="Lyrics\IO\LyricSongFactoryIO.cs" />
+    <Compile Include="Lyrics\LyricSongFactory.cs" />
+    <Compile Include="Lyrics\LyricSongFactoryCollection.cs" />
+    <Compile Include="Lyrics\StringManipulations.cs" />
+    <Compile Include="Lyrics\Theme\Evaluator\Evaluator.cs" />
+    <Compile Include="Lyrics\Theme\Loader\ThemeFileLoader.cs" />
+    <Compile Include="Lyrics\Theme\LyricSource.cs" />
+    <Compile Include="Lyrics\Theme\Theme.cs" />
+    <Compile Include="Lyrics\Theme\ThemeException.cs" />
+    <Compile Include="Lyrics\Theme\ThemeList.cs" />
+    <Compile Include="Lyrics\Theme\Loader\ThemeLoader.cs" />
+    <Compile Include="Lyrics\Verse\Verse.cs" />
+    <Compile Include="Lyrics\Verse\VerseFactory\AbstractVerseFactory.cs" />
+    <Compile Include="Lyrics\Verse\VerseFactory\Parts\CreationMemory.cs" />
+    <Compile Include="Lyrics\Verse\VerseFactory\Parts\VerseConstructionSettings.cs" />
+    <Compile Include="Lyrics\Verse\VerseFactory\Strategies\Straight\VerseFactoryStraight.cs" />
+    <Compile Include="Lyrics\Verse\VerseFactory\Strategies\Words\VerseFactoryWords.cs" />
+    <Compile Include="Lyrics\Verse\VerseFactory\VerseFactory.cs" />
+    <Compile Include="Lyrics\Verse\VerseFactory\VerseFactoryException.cs" />
+    <Compile Include="Markov\LetterMatrix.cs" />
+    <Compile Include="Markov\Probabilities.cs" />
+    <Compile Include="Markov\WordMatrix.cs" />
+    <Compile Include="Parsing\ExpressionSerializer.cs" />
+    <Compile Include="Parsing\Parts\BracketDefinition.cs" />
+    <Compile Include="Parsing\Parts\BracketStackConsistencyValidator.cs" />
+    <Compile Include="Parsing\TreeExpression.cs" />
+    <Compile Include="Parsing\UniversalParser.cs" />
+    <Compile Include="PathFinding\INodeState.cs" />
+    <Compile Include="PathFinding\Node.cs" />
+    <Compile Include="PathFinding\PathFinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Waves\IWave.cs" />
+    <Compile Include="Waves\Wave.cs" />
+    <Compile Include="Waves\WaveCache.cs" />
+    <Compile Include="Waves\WaveFunctions.cs" />
+    <Compile Include="Waves\WavePack.cs" />
+    <Compile Include="Markov\Matrix.cs" />
+    <Compile Include="Markov\XmlMatrixSaverLoader.cs" />
+    <Compile Include="WebServices\Bots\SearchChatBots\AbstractSearchChatBot.cs" />
+    <Compile Include="WebServices\Bots\SearchChatBots\GoogleChatBot.cs" />
+    <Compile Include="WebServices\Bots\TranslationBots\BabelFishTranslationBot.cs" />
+    <Compile Include="WebServices\Bots\TranslationBots\AbstractTranslationBot.cs" />
+    <Compile Include="WebServices\Bots\TranslationBots\TranslationException.cs" />
+    <Compile Include="WebServices\Bots\WebBot.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Audio\Midi\Sanford\UI\DeviceDialog.resx">
+      <DependentUpon>DeviceDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\Midi\Sanford\UI\InputDeviceDialog.resx">
+      <DependentUpon>InputDeviceDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\Midi\Sanford\UI\OutputDeviceDialog.resx">
+      <DependentUpon>OutputDeviceDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Audio\Midi\Sanford\UI\PianoControlDialog.resx">
+      <DependentUpon>PianoControlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Linguistics\English\WordLists\irregularVerbList.txt" />
+    <Resource Include="Linguistics\English\WordLists\modalVerbList.txt" />
+    <Resource Include="Linguistics\English\WordLists\postpositionList.txt" />
+    <Resource Include="Linguistics\English\WordLists\prepositionList.txt" />
+    <Resource Include="Linguistics\English\WordLists\pronounList.txt" />
+    <Resource Include="Linguistics\English\WordLists\questionBeginWordList.txt" />
+    <Resource Include="Linguistics\English\WordLists\questionEndingWordList.txt" />
+    <Resource Include="Linguistics\English\WordLists\regularVerbList.txt" />
+    <Resource Include="Linguistics\English\WordLists\subordinatingConjunctionBeforeSubjectList.txt" />
+    <Resource Include="Linguistics\English\WordLists\undefinedVerbList.txt" />
+    <Resource Include="Linguistics\English\WordLists\wordToPutNotAfterList.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Linguistics\English\WordLists\antonymList.xml" />
+    <Resource Include="Linguistics\English\WordLists\synonymList.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Lyrics\themeFile.themes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Linguistics\Language\LanguageMatrixesXml\czech.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\danish.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\dutch.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\english.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\estonian.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\finnish.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\french.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\gaelic.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\hungarian.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\indonesian.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\italian.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\latvian.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\norse.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\polish.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\portuguese.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\romanian.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\russian.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\spanish.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\swaili.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\swedish.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\turkish.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\vietnamese.language.matrix.xml" />
+    <None Include="Linguistics\Language\LanguageMatrixesXml\wolof.language.matrix.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Linguistics\Language\LanguageMatrixesXml\german.language.matrix.xml" />
+    <Content Include="Linguistics\Language\LanguageText\czech.txt" />
+    <Content Include="Linguistics\Language\LanguageText\danish.txt" />
+    <Content Include="Linguistics\Language\LanguageText\dutch.txt" />
+    <Content Include="Linguistics\Language\LanguageText\english.txt" />
+    <Content Include="Linguistics\Language\LanguageText\estonian.txt" />
+    <Content Include="Linguistics\Language\LanguageText\finnish.txt" />
+    <Content Include="Linguistics\Language\LanguageText\french.txt" />
+    <Content Include="Linguistics\Language\LanguageText\gaelic.txt" />
+    <Content Include="Linguistics\Language\LanguageText\hungarian.txt" />
+    <Content Include="Linguistics\Language\LanguageText\indonesian.txt" />
+    <Content Include="Linguistics\Language\LanguageText\italian.txt" />
+    <Content Include="Linguistics\Language\LanguageText\latvian.txt" />
+    <Content Include="Linguistics\Language\LanguageText\norse.txt" />
+    <Content Include="Linguistics\Language\LanguageText\polish.txt" />
+    <Content Include="Linguistics\Language\LanguageText\portuguese.txt" />
+    <Content Include="Linguistics\Language\LanguageText\romanian.txt" />
+    <Content Include="Linguistics\Language\LanguageText\russian.txt" />
+    <Content Include="Linguistics\Language\LanguageText\spanish.txt" />
+    <Content Include="Linguistics\Language\LanguageText\swaili.txt" />
+    <Content Include="Linguistics\Language\LanguageText\swedish.txt" />
+    <Content Include="Linguistics\Language\LanguageText\turkish.txt" />
+    <Content Include="Linguistics\Language\LanguageText\vietnamese.txt" />
+    <Content Include="Linguistics\Language\LanguageText\wolof.txt" />
+    <None Include="Resources\themeFile.fr.themes.txt" />
+    <None Include="testing\bin\Debug\wolof.language.matrix.xml" />
+    <None Include="testing\bin\Debug\vietnamese.language.matrix.xml" />
+    <None Include="testing\bin\Debug\turkish.language.matrix.xml" />
+    <None Include="testing\bin\Debug\swedish.language.matrix.xml" />
+    <None Include="testing\bin\Debug\swaili.language.matrix.xml" />
+    <None Include="testing\bin\Debug\spanish.language.matrix.xml" />
+    <None Include="testing\bin\Debug\russian.language.matrix.xml" />
+    <None Include="testing\bin\Debug\romanian.language.matrix.xml" />
+    <None Include="testing\bin\Debug\portuguese.language.matrix.xml" />
+    <None Include="testing\bin\Debug\polish.language.matrix.xml" />
+    <None Include="testing\bin\Debug\norse.language.matrix.xml" />
+    <None Include="testing\bin\Debug\latvian.language.matrix.xml" />
+    <None Include="testing\bin\Debug\italian.language.matrix.xml" />
+    <None Include="testing\bin\Debug\indonesian.language.matrix.xml" />
+    <None Include="testing\bin\Debug\hungarian.language.matrix.xml" />
+    <None Include="testing\bin\Debug\gaelic.language.matrix.xml" />
+    <None Include="testing\bin\Debug\french.language.matrix.xml" />
+    <None Include="testing\bin\Debug\finnish.language.matrix.xml" />
+    <None Include="testing\bin\Debug\estonian.language.matrix.xml" />
+    <None Include="testing\bin\Debug\english.language.matrix.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
